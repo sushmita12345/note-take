@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/note-take/static/css/main.a8b40659.css",
+    "main.js": "/note-take/static/js/main.476bd333.js",
+    "static/media/logo.png": "/note-take/static/media/logo.a4227f291eb6d948cf78.png",
+    "index.html": "/note-take/index.html",
+    "main.a8b40659.css.map": "/note-take/static/css/main.a8b40659.css.map",
+    "main.476bd333.js.map": "/note-take/static/js/main.476bd333.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8b40659.css",
+    "static/js/main.476bd333.js"
+  ]
+}
