@@ -1,0 +1,81 @@
+@import "../../assets/reset.css";
+
+.note-land-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh;
+}
+
+.note-land-content-section {
+  display: flex;
+  padding-left: 15rem;
+}
+
+.note-logo-img {
+  display: flex;
+  height: 12rem;
+  width: 12rem;
+}
+
+.note-main-img {
+  width: 100%;
+  height: auto;
+}
+
+.note-main-img-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-content-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.note-join-btn {
+  border: none;
+  height: 4rem;
+  width: 12rem;
+  font-size: 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.note-join-btn:hover {
+  background-color: var(--white);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  transition: ease-in-out 0.5s;
+}
+
+.note-text-container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.note-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.note-join-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.note-modern-clr {
+  color: var(--secondary-color);
+}
+
+.note-take-clr {
+  color: var(--primary-color);
+}
