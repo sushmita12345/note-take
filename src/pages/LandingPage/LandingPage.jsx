@@ -1,6 +1,7 @@
 import "./LandingPage.css";
 import logo from "../../assets/Image/LogoImg/HIFI.png";
-import mainImg from "../../assets/Image/LandingPage/main-img.png"
+import mainImg from "../../assets/Image/LandingPage/main-img.png";
+import {Link} from "react-router-dom"
 
 export function LandingPage() {
     return (
@@ -19,7 +20,7 @@ export function LandingPage() {
                         
                     </div>
                     <div className="note-join-container">
-                        <button className="note-join-btn">Join Now</button>
+                       <Link to="/login"> <button className="note-join-btn">Join Now</button></Link>
                         <p>Already have an account?</p>
                     </div>
                 </div>

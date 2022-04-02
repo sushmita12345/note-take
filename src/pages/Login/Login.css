@@ -1,0 +1,102 @@
+@import "../../assets/reset.css";
+
+.login-container {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--back-grey);
+}
+
+.login-container-wrapper {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  padding: 3rem 5rem;
+  border-radius: 5px;
+  box-shadow: var(--black-shade) 0px 1px 4px;
+}
+
+.form-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-page {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 4.2rem;
+}
+
+.login-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+
+.login-box {
+  height: 4rem;
+  width: 25vw;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.pwd-remember {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rem-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.login-checkbox {
+  margin-right: 0.5rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--grey);
+}
+
+.login-remember {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.login-forget {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: var(--login-blue);
+}
+
+.login-btn {
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  /* color: var(--secondary-color); */
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.login-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+}
