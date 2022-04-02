@@ -7,8 +7,6 @@ import {Home} from "../src/pages/Home/Home";
 function App() {
   return (
     <div className="App">
-      
-
       <Routes>
         <Route  exact path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
