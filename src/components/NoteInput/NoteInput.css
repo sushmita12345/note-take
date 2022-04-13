@@ -1,0 +1,62 @@
+.modal {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0;
+  padding: 0;
+}
+
+.note-take-container {
+  width: 40rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 5rem;
+  background-color: white;
+}
+
+.note-take-header,
+.note-take-section {
+  padding: 1rem;
+}
+
+.note-title {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.note-take-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.note-take-palatte {
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+}
+
+.note-color-palatte {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.new-note-upper {
+  width: 100%;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+}
+
+/* ::placeholder {
+   
+} */
