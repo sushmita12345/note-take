@@ -47,7 +47,7 @@ export function SaveNote({noteDetails}) {
                 <div className="note-wrapper-container">
                     <div className="added-note-wrapper" style={{backgroundColor: backgroundColor}}>
                         <div>
-                            <h3>{title}</h3>
+                            <h1>{title}</h1>
                             <p>{noteContent}</p>
                         </div>
                         <div className="new-note-lower">

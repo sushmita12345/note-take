@@ -96,7 +96,7 @@ export function NoteInput({data, setEditCard}) {
                                     color = {pickColor}
                                     onChange={(getColor) => {
                                         setPickColor(getColor.hex);
-                                        setPickColorPalatte({...note, backgroundColor: getColor.hex})
+                                        setNote(() => ({...note, backgroundColor: getColor.hex}));
                                     }}
 
                                 />
