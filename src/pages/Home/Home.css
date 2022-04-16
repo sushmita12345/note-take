@@ -118,14 +118,21 @@
   justify-content: center;
 }
 
+.all-note-take {
+  height: 100%;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
 /* added card */
 
 .added-note-container {
-  display: flex;
-  width: 100%;
+  /* display: flex;*/
+  /* width: 100%; */
   margin-top: 5rem;
-  height: 15rem;
-  margin-left: 5rem;
+  /* height: 15rem; */
+  /* margin-left: 5rem; */
 }
 
 .note-wrapper-container {

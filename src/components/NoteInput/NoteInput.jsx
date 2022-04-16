@@ -30,7 +30,7 @@ export function NoteInput({data, setEditCard}) {
     };
 
     const [note, setNote] = useState(data ? data : noteInitialState)
-
+    console.log(note)
     const addNotesHandler = async() => {
         try {
             let response = null;
@@ -51,10 +51,11 @@ export function NoteInput({data, setEditCard}) {
                     }
                 }
                 )
-                if(response.status === 200 || response.status === 201){
-                    console.log(response.data.notes)
-                    noteDispatch({type: "ADD_NOTES", payload: {note: response.data.notes}})
-                }
+                
+            }
+            if(response.status === 200 || response.status === 201){
+                console.log(response.data.notes)
+                noteDispatch({type: "ADD_NOTES", payload: {note: response.data.notes}})
             }
         }catch(err) {
             console.error(err.message)
@@ -106,18 +107,18 @@ export function NoteInput({data, setEditCard}) {
                             <button 
                                 className="note-add-btn"
                                 onClick={() => {
-                                    console.log("click")
                                     addNotesHandler();
                                     setNote(() => ({
                                         title: "",
                                         noteContent: "",
-                                        backgroundColor: "#FFFFFF",
+                                        backgroundColor: note.backgroundColor,
                                         // timeStamp: date.getTime(),
                                         label: "",
-                                    }))
-                                    data && setEditCard(false)
+                                    }));
+                                    data && setEditCard(false);
                                 }}
-                                >Add</button>
+                                >Add
+                            </button>
                         </div>
                     </footer>
                 </div>
