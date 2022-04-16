@@ -1,0 +1,111 @@
+@import "../../assets/reset.css";
+
+.note-main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.note-sidebar-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.note-sidebar-wrapper {
+  width: 10rem;
+  display: flex;
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  align-items: center;
+  text-align: start;
+}
+
+.note-sidebar-icon {
+  margin-right: 1rem;
+  font-size: 2.5rem;
+}
+
+.note-searchbar {
+  width: 75%;
+  height: 4rem;
+}
+
+.note-magnify-icon {
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
+  font-size: 1.8rem;
+}
+
+.note-search-wrapper {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.new-note-lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-text-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.note-date {
+  margin-left: 1rem;
+}
+
+.note-add-btn,
+.note-edit-btn {
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.note-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-note-take {
+  height: 100%;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* added card */
+
+.added-note-container {
+  margin-top: 5rem;
+}
+
+.note-wrapper-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.added-note-wrapper {
+  width: 40rem;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
