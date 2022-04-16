@@ -32,15 +32,6 @@ export function Home() {
                
                        
             </div>
-            {/* <div> */}
-                {/* <div className="added-note-container">                   
-                    {notes.map((note) => {
-                        
-                    return <SaveNote noteDetails={note} key={note._id}/>
-                        
-                    })}
-                </div> */}
-            {/* </div> */}
         </>
     )
 }

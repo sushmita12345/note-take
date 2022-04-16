@@ -127,68 +127,6 @@ export function NoteInput({data, setEditCard}) {
                 <input type="text" placeholder="Search" className="note-searchbar"/>
                 <MdiMagnify className="note-magnify-icon"/>  
             </div> */}
-            
-            {/* <div className="note-main-body-container">
-                <div className={`${data && "modal"}`}>  
-                
-                    <div className="new-note-container">
-                        <div className="new-note-wrapper">
-                            <textarea 
-                                className="note-title" 
-                                placeholder="Title" 
-                                value={note.title}
-                                onChange={(e) => setNote(() => ({...note, title: e.target.value}))}
-                                >
-
-                            </textarea>
-                            <textarea 
-                                className="new-note-upper" 
-                                placeholder="Add New Note"
-                                value={note.noteContent}
-                                onChange={(e) => setNote(() => ({...note, noteContent: e.target.value}))}
-                                >
-
-                            </textarea>
-                        
-                            <div className="new-note-lower">
-                                <MdiPaletteOutline className="note-color-palatte" onClick={() => setPickColorPalatte(!pickColorPallate)}/>
-
-                                {
-                                    pickColorPallate && (
-                                        <ChromePicker 
-                                            color = {pickColor}
-                                            onChange={(getColor) => {
-                                                setPickColor(getColor.hex);
-                                                setPickColorPalatte({...note, backgroundColor: getColor.hex})
-                                            }}
-
-                                        />
-                                    )
-                                }
-                                
-                                <div className="note-icon-container">
-                                    <button 
-                                        className="note-add-btn"
-                                        onClick={() => {
-                                            console.log("click")
-                                            addNotesHandler();
-                                            setNote(() => ({
-                                                title: "",
-                                                noteContent: "",
-                                                backgroundColor: "#FFFFFF",
-                                                // timeStamp: date.getTime(),
-                                                label: "",
-                                            }))
-                                            data && setEditCard(false)
-                                        }}
-                                        >Add</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                    
-                </div>
-            </div> */}
         </>
         
     )
