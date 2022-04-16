@@ -11,7 +11,6 @@ export function SaveNote({noteDetails}) {
     // const {noteState, noteDispatch} = useNote();
     // const {token} = useAuth();
     const [editCard, setEditCard] = useState()
-    console.log(noteDetails)
 
     function editCardHandler() {
         setEditCard(true)
@@ -36,7 +35,6 @@ export function SaveNote({noteDetails}) {
     //         console.error(err.message)
     //     }
     // }
-
 
     return (
 

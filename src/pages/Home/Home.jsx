@@ -9,11 +9,9 @@ export function Home() {
 
     const {noteState} = useNote();
     const {notes} = noteState
-    console.log(notes)
     return (
         <>
-            <div className="note-main-container">
-                
+            <div className="note-main-container">    
                 <Sidebar />
                 <div className="note-take-wrapper">
                     <NoteInput />  
@@ -25,12 +23,8 @@ export function Home() {
                             
                             ))}
                         </div>
-                    </div>                
-                    
-                   
-                </div>
-               
-                       
+                    </div>                 
+                </div>        
             </div>
         </>
     )

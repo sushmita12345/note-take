@@ -6,17 +6,12 @@ import { useState } from "react";
 import { ChromePicker } from "react-color";
 import "./NoteInput.css";
 
-
-
 export function NoteInput({data, setEditCard}) {
 
     const [pickColorPallate, setPickColorPalatte] = useState(false);
     const [pickColor, setPickColor] = useState();
-
     const { noteDispatch} = useNote();
     const {token} = useAuth();
-    console.log(data)
-    
 
     // const date = new Date();
 
@@ -30,7 +25,6 @@ export function NoteInput({data, setEditCard}) {
     };
 
     const [note, setNote] = useState(data ? data : noteInitialState)
-    console.log(note)
     const addNotesHandler = async() => {
         try {
             let response = null;
@@ -54,7 +48,6 @@ export function NoteInput({data, setEditCard}) {
                 
             }
             if(response.status === 200 || response.status === 201){
-                console.log(response.data.notes)
                 noteDispatch({type: "ADD_NOTES", payload: {note: response.data.notes}})
             }
         }catch(err) {

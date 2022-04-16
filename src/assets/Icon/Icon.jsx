@@ -5,13 +5,11 @@ export function MdiHomeOutline(props) {
     )
   }
 
-
 export function MdiLabelOutline(props) {
     return (
       <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M16 17H5V7h11l3.55 5m-1.92-6.16C17.27 5.33 16.67 5 16 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h11c.67 0 1.27-.34 1.63-.85L22 12l-4.37-6.16Z"></path></svg>
     )
   }
-
 
 export function MdiArchiveOutline(props) {
     return (
@@ -19,13 +17,11 @@ export function MdiArchiveOutline(props) {
     )
 }
 
-
 export function MdiTrashCanOutline(props) {
     return (
       <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"></path></svg>
     )
   }
-
 
   export function MdiAccountCircleOutline(props) {
     return (
@@ -33,20 +29,17 @@ export function MdiTrashCanOutline(props) {
     )
   }
 
-
   export function MdiMagnify(props) {
     return (
       <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5l-1.5 1.5l-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16A6.5 6.5 0 0 1 3 9.5A6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14S14 12 14 9.5S12 5 9.5 5Z"></path></svg>
     )
   }
 
-
   export function MdiPinOutline(props) {
     return (
       <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2m-7.2 2l1.2-1.2V4h4v8.8l1.2 1.2H8.8Z"></path></svg>
     )
   }
-
 
   export function MdiPaletteOutline(props) {
     return (
