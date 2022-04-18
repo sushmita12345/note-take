@@ -1,9 +1,6 @@
-import "./Home.css";
-// import {MdiLabelOutline, MdiArchiveOutline, MdiTrashCanOutline} from "../../assets/Icon/Icon"
-import { Sidebar } from "../../components/Sidebar/Sidebar";
-import { NoteInput } from "../../components/NoteInput/NoteInput";
-import { SaveNote } from "../../components/SaveNote/SaveNote";
-import { useNote } from "../../Context/noteContext"; 
+import "./Home.css"; 
+import { Sidebar, NoteInput, SaveNote } from "../../components/index";
+import {useNote} from "../../Context/noteContext";
 
 export function Home() {
 
