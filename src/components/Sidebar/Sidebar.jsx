@@ -1,10 +1,12 @@
+import "./Sidebar.css";
 import {MdiHomeOutline, MdiLabelOutline, MdiArchiveOutline, MdiTrashCanOutline, MdiAccountCircleOutline} from "../../assets/Icon/Icon"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+
 
 export function Sidebar() {
     return (
         <div className="note-sidebar-container">
-            <Link to={"/home"} style={{ textDecoration: 'none' }}><div className="note-sidebar-wrapper">
+            <Link to={"/home"} className="sidebar-link"><div className="note-sidebar-wrapper">
                 <MdiHomeOutline className="note-sidebar-icon"/>
                 <span>
                     Home
@@ -16,7 +18,7 @@ export function Sidebar() {
                     Label
                 </span>
             </div>
-            <Link to={"/archive"} style={{ textDecoration: 'none' }}><div className="note-sidebar-wrapper">
+            <Link to={"/archive"} className="sidebar-link"><div className="note-sidebar-wrapper">
                 <MdiArchiveOutline className="note-sidebar-icon"/>
                 <span>
                     Archive

@@ -1,9 +1,6 @@
 import "./App.css";
-import {LandingPage} from "./pages/LandingPage/LandingPage";
 import {Route, Routes} from "react-router-dom";
-import {Login} from "../src/pages/Login/Login";
-import {Home} from "../src/pages/Home/Home";
-import {Archive} from "../src/pages/Archive/Archive";
+import {LandingPage, Login, Home, Archive} from "./pages/index";
 
 function App() {
   return (
