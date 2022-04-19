@@ -1,6 +1,6 @@
 import "./App.css";
 import {Route, Routes} from "react-router-dom";
-import {LandingPage, Login, Home, Archive} from "./pages/index";
+import {LandingPage, Login, Home, Archive, Trash} from "./pages/index";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Route  exact path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/trash" element={<Trash />} />
         <Route path="/archive" element={<Archive />} />
       </Routes>
     </div>

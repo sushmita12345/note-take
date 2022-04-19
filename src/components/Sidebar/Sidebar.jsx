@@ -24,12 +24,12 @@ export function Sidebar() {
                     Archive
                 </span>
             </div></Link>
-            <div className="note-sidebar-wrapper">
+            <Link to={"/trash"} className="sidebar-link"><div className="note-sidebar-wrapper">
                 <MdiTrashCanOutline className="note-sidebar-icon"/>
                 <span>
                     Trash
                 </span>
-            </div>
+            </div></Link>
             <div className="note-sidebar-wrapper">
                 <MdiAccountCircleOutline className="note-sidebar-icon"/>
                 <span>

@@ -29,34 +29,32 @@ export function SaveNote({noteDetails}) {
             if(res.status === 200 || res.status === 201) {
                 noteDispatch({type: "ADD_ARCHIVES", payload: {archive: res.data.archives}})
                 noteDispatch({type: "ADD_NOTES", payload: {note: res.data.notes}})
-                // console.log(noteDetails)
-                // console.log(res.data.archives)
-                // console.log(res.data.notes)
+        
             }
         } catch(err) {
             console.error(err)
         }
     }
 
-    // const deleteNote = async() => {
-    //     try {
-    //         const res = await axios.delete(`/api/notes/${noteDetails._id}`,{
-    //             header: {
-    //                 authorization: token,
-    //             }
-    //         }
-    //         )
-    //         if(res.status === 200 || res.status === 201) {
-    //             const deleteNoteData = noteState.notes.filter(
-    //                 (item) => item._id === noteDetails._id
-    //             )[0];
-    //             noteDispatch({type: "TRASH", payload: deleteNoteData})
-    //             noteDispatch({type: "ADD_NOTES", payload: {note: res.data.notes}})
-    //         }
-    //     } catch(err){
-    //         console.error(err.message)
-    //     }
-    // }
+    const deleteNote = async() => {
+        try {
+            const res = await axios.delete(`/api/notes/${noteDetails._id}`,{
+                headers: {
+                    authorization: token,
+                }
+            }
+            )
+            if(res.status === 200 || res.status === 201) {
+                const deleteNoteData = noteState.notes.filter(
+                    (item) => item._id === noteDetails._id
+                )[0];
+                noteDispatch({type: "TRASH", payload: deleteNoteData})
+                noteDispatch({type: "ADD_NOTES", payload: {note: res.data.notes}})
+            }
+        } catch(err){
+            console.error(err.message)
+        }
+    }
 
     return (
 
@@ -73,11 +71,10 @@ export function SaveNote({noteDetails}) {
                         <div className="new-note-lower">
                                 <span>11-04-2022</span>
                             <div className="note-icon-container">
-                                {/* <button className="note-edit-btn" onClick={editCardHandler}>Edit</button> */}
                                 <MdiSquareEditOutline className="note-text-icon" onClick={editCardHandler}/>
                                 <MdiLabelOutline className="note-text-icon"/>
                                 <MdiArchiveOutline className="note-text-icon" onClick={archiveNote}/>
-                                <MdiTrashCanOutline className="note-text-icon"/>
+                                <MdiTrashCanOutline className="note-text-icon" onClick={deleteNote}/>
                             </div>
                             
                         </div>
