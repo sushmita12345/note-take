@@ -45,7 +45,7 @@ export function Trash() {
                         </div>
 
                     ):(
-                        <h1>Archive is Empty!</h1>
+                        <h1>Trash is Empty!</h1>
                     )}
                 </div>
             </div>
