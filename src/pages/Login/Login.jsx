@@ -14,17 +14,23 @@ export function Login() {
     const loginHandler = async (e)  => {
         e.preventDefault();
         try {
-            const {status, data: {foundUser, encodedToken}} = await axios.post(`/api/auth/login`, loginForm
+            // const {status, data: {foundUser, encodedToken}} = await axios.post(`/api/auth/login`, loginForm
 
-            );
+            // );
+            const response = await axios.post(`/api/auth/login`, loginForm)
+            if(response.status === 200 || response.status === 201){
+                localStorage.setItem("login-token", JSON.stringify({token: response.data.encodedToken, user: response.data.foundUser}))
+                setUser(response.data.foundUser)
+                setToken(response.data.encodedToken)
+            }
             // saving the encodedToken in the localStorage
 
-            localStorage.setItem("login-token", encodedToken);
-            localStorage.setItem("user", JSON.stringify(foundUser));
+            // localStorage.setItem("login-token", encodedToken);
+            // localStorage.setItem("user", JSON.stringify({user: foundUser}));
 
-            setUser(foundUser)
-            setToken(encodedToken)
-            if(encodedToken){
+            // setUser(foundUser)
+            // setToken(encodedToken)
+            if(response.data.encodedToken){
                 navigate("/home")
             }
         } catch (error) {

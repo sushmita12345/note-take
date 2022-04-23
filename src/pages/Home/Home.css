@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 5rem;
+  margin-left: 2rem;
 }
 
 .note-sidebar-wrapper {
@@ -96,10 +97,13 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .added-note-wrapper {
-  width: 40rem;
+  /* width: 40rem; */
+  width: 100%;
   height: 100%;
   padding: 1.5rem;
   display: flex;

@@ -18,6 +18,8 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-top: 5rem;
   background-color: white;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .note-take-header,

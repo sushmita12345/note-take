@@ -1,9 +1,19 @@
+import {useState} from 'react';
 import "./Sidebar.css";
 import {MdiHomeOutline, MdiLabelOutline, MdiArchiveOutline, MdiTrashCanOutline, MdiAccountCircleOutline} from "../../assets/Icon/Icon"
 import { Link } from "react-router-dom";
-
+import {useNote} from "../../Context/noteContext"
 
 export function Sidebar() {
+
+    const {noteState, noteDispatch} = useNote();
+    const [profileModal, setProfileModal] = useState(false)
+
+    const getToken = JSON.parse(localStorage.getItem("login-token"));
+    console.log(getToken)
+    const userName = getToken.user.firstName
+    console.log(userName)
+  
     return (
         <div className="note-sidebar-container">
             <Link to={"/home"} className="sidebar-link"><div className="note-sidebar-wrapper">
@@ -33,7 +43,7 @@ export function Sidebar() {
             <div className="note-sidebar-wrapper">
                 <MdiAccountCircleOutline className="note-sidebar-icon"/>
                 <span>
-                    Profile
+                    {userName}
                 </span>
             </div>
         </div>

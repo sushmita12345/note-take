@@ -5,6 +5,7 @@ import { useNote } from "../../Context/noteContext";
 import { useState } from "react";
 import { ChromePicker } from "react-color";
 import "./NoteInput.css";
+import {getCurrentDate} from "./CurrentDate";
 
 export function NoteInput({data, setEditCard}) {
 
@@ -13,13 +14,14 @@ export function NoteInput({data, setEditCard}) {
     const { noteDispatch} = useNote();
     const {token} = useAuth();
 
-    // const date = new Date();
+    const date = getCurrentDate()
+    console.log(date)
 
     const noteInitialState = {
         title: "",
         noteContent: "",
         backgroundColor: "#FFFFFF",
-        // timeStamp: date.getTime(),
+        createdDate: date,
         label: "",
 
     };
@@ -101,11 +103,12 @@ export function NoteInput({data, setEditCard}) {
                                 className="note-add-btn"
                                 onClick={() => {
                                     addNotesHandler();
+                                    
                                     setNote(() => ({
                                         title: "",
                                         noteContent: "",
                                         backgroundColor: note.backgroundColor,
-                                        // timeStamp: date.getTime(),
+                                        createdDate: date,
                                         label: "",
                                     }));
                                     data && setEditCard(false);
