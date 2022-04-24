@@ -1,13 +1,14 @@
-import {MdiLabelOutline, MdiArchiveOutline, MdiTrashCanOutline, MdiSquareEditOutline} from "../../assets/Icon/Icon";
+import {MdiArchiveOutline, MdiTrashCanOutline, MdiSquareEditOutline} from "../../assets/Icon/Icon";
 import { useNote } from "../../Context/noteContext";
 import { useAuth } from "../../Context/authContext";
 import axios from "axios";
 import { useState } from "react";
 import { NoteInput } from "../NoteInput/NoteInput";
+import "./SaveNote.css";
 
 
 export function SaveNote({noteDetails}) {
-    const {title, noteContent, backgroundColor} = noteDetails 
+    const {title, createdDate, noteContent, backgroundColor, label} = noteDetails 
 
     const {noteState, noteDispatch} = useNote();
     const {token} = useAuth();
@@ -17,7 +18,6 @@ export function SaveNote({noteDetails}) {
         setEditCard(true)
     }
 
-    // const archiveNote = async() => {
     async function archiveNote(){
         try{
             const res= await axios.post(`/api/notes/archives/${noteDetails._id}`, {noteDetails}, {
@@ -66,13 +66,13 @@ export function SaveNote({noteDetails}) {
                     <div className="added-note-wrapper" style={{backgroundColor: backgroundColor}}>
                         <div>
                             <h1>{title}</h1>
-                            <p>{noteContent}</p>
+                            <p>{label}</p>
+                            <p className="saveNote-content">{noteContent}</p>
                         </div>
                         <div className="new-note-lower">
-                                <span>11-04-2022</span>
+                                <span>{createdDate}</span>
                             <div className="note-icon-container">
                                 <MdiSquareEditOutline className="note-text-icon" onClick={editCardHandler}/>
-                                <MdiLabelOutline className="note-text-icon"/>
                                 <MdiArchiveOutline className="note-text-icon" onClick={archiveNote}/>
                                 <MdiTrashCanOutline className="note-text-icon" onClick={deleteNote}/>
                             </div>

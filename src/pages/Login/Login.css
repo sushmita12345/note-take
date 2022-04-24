@@ -1,10 +1,8 @@
 @import "../../assets/reset.css";
 
 .login-container {
-  width: 100%;
-  height: calc(100vh - 8rem);
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--back-grey);
@@ -86,7 +84,6 @@
   height: 3.5rem;
   background-color: var(--primary-color);
   color: var(--white);
-  /* color: var(--secondary-color); */
   border: none;
   margin-bottom: 2rem;
 }
@@ -99,4 +96,82 @@
   font-weight: 500;
   line-height: 2.4rem;
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1040px) {
+  .login-container-wrapper {
+    width: 40%;
+  }
+
+  .login-box {
+    width: 100%;
+  }
+  .login-remember {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .login-container-wrapper {
+    width: 40%;
+  }
+
+  .login-box {
+    width: 100%;
+  }
+  .login-remember {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-container-wrapper {
+    width: 40%;
+  }
+
+  .login-box {
+    width: 100%;
+  }
+  .login-remember {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .login-container-wrapper {
+    width: 60%;
+  }
+
+  .login-box {
+    width: 100%;
+  }
+  .login-remember {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-container-wrapper {
+    width: 80%;
+  }
+
+  .login-box {
+    width: 100%;
+  }
+  .login-remember {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .login-container-wrapper {
+    width: 80%;
+  }
+
+  .login-box {
+    width: 100%;
+  }
+  .login-remember {
+    margin-right: 2rem;
+  }
 }

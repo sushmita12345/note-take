@@ -5,6 +5,7 @@ import { useNote } from "../../Context/noteContext";
 import { useState } from "react";
 import { ChromePicker } from "react-color";
 import "./NoteInput.css";
+import {getCurrentDate} from "./CurrentDate";
 
 export function NoteInput({data, setEditCard}) {
 
@@ -13,13 +14,14 @@ export function NoteInput({data, setEditCard}) {
     const { noteDispatch} = useNote();
     const {token} = useAuth();
 
-    // const date = new Date();
+    const date = getCurrentDate()
+    console.log(date)
 
     const noteInitialState = {
         title: "",
         noteContent: "",
         backgroundColor: "#FFFFFF",
-        // timeStamp: date.getTime(),
+        createdDate: date,
         label: "",
 
     };
@@ -80,32 +82,37 @@ export function NoteInput({data, setEditCard}) {
                         </textarea>
                     </section>
                     <footer className="note-take-footer">
-                        <MdiPaletteOutline className="note-color-palatte" onClick={() => setPickColorPalatte(!pickColorPallate)}/>
+                        <div className="note-label-palatte">
+                           
+                            <MdiPaletteOutline className="note-color-palatte" onClick={() => setPickColorPalatte(!pickColorPallate)}/>
 
-                        {
-                            pickColorPallate && (
-                                <ChromePicker 
-                                    className="note-take-palatte"
-                                    color = {pickColor}
-                                    onChange={(getColor) => {
-                                        setPickColor(getColor.hex);
-                                        setNote(() => ({...note, backgroundColor: getColor.hex}));
-                                    }}
+                            {
+                                pickColorPallate && (
+                                    <ChromePicker 
+                                        className="note-take-palatte"
+                                        color = {pickColor}
+                                        onChange={(getColor) => {
+                                            setPickColor(getColor.hex);
+                                            setNote(() => ({...note, backgroundColor: getColor.hex}));
+                                        }}
 
-                                />
-                            )
-                        }
+                                    />
+                                )
+                            }
+                            <input type="text" class="note-label" placeholder="Label" value={note.label} onChange={(e) => setNote({...note, label: e.target.value})}/>
+                        </div>
 
                         <div className="note-icon-container">
                             <button 
                                 className="note-add-btn"
                                 onClick={() => {
                                     addNotesHandler();
+                                    
                                     setNote(() => ({
                                         title: "",
                                         noteContent: "",
                                         backgroundColor: note.backgroundColor,
-                                        // timeStamp: date.getTime(),
+                                        createdDate: date,
                                         label: "",
                                     }));
                                     data && setEditCard(false);
