@@ -58,6 +58,7 @@ export function Archive() {
                                                 <div className="added-note-wrapper" style={{backgroundColor: archiveNote.backgroundColor}}>
                                                     <div>
                                                         <h1>{archiveNote.title}</h1>
+                                                        <p>{archiveNote.label}</p>
                                                         <p>{archiveNote.noteContent}</p>
                                                     </div>
                                                     <div className="new-note-lower">

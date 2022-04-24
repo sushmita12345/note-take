@@ -82,21 +82,25 @@ export function NoteInput({data, setEditCard}) {
                         </textarea>
                     </section>
                     <footer className="note-take-footer">
-                        <MdiPaletteOutline className="note-color-palatte" onClick={() => setPickColorPalatte(!pickColorPallate)}/>
+                        <div className="note-label-palatte">
+                           
+                            <MdiPaletteOutline className="note-color-palatte" onClick={() => setPickColorPalatte(!pickColorPallate)}/>
 
-                        {
-                            pickColorPallate && (
-                                <ChromePicker 
-                                    className="note-take-palatte"
-                                    color = {pickColor}
-                                    onChange={(getColor) => {
-                                        setPickColor(getColor.hex);
-                                        setNote(() => ({...note, backgroundColor: getColor.hex}));
-                                    }}
+                            {
+                                pickColorPallate && (
+                                    <ChromePicker 
+                                        className="note-take-palatte"
+                                        color = {pickColor}
+                                        onChange={(getColor) => {
+                                            setPickColor(getColor.hex);
+                                            setNote(() => ({...note, backgroundColor: getColor.hex}));
+                                        }}
 
-                                />
-                            )
-                        }
+                                    />
+                                )
+                            }
+                            <input type="text" class="note-label" placeholder="Label" value={note.label} onChange={(e) => setNote({...note, label: e.target.value})}/>
+                        </div>
 
                         <div className="note-icon-container">
                             <button 

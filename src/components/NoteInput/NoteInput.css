@@ -50,6 +50,7 @@
 .note-color-palatte {
   font-size: 2rem;
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .new-note-upper {
@@ -57,4 +58,13 @@
   font-size: 1.5rem;
   border: none;
   outline: none;
+}
+
+.note-label {
+  border: none;
+  outline: none;
+}
+
+.note-label-palatte {
+  display: flex;
 }

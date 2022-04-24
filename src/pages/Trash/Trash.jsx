@@ -26,6 +26,7 @@ export function Trash() {
                                                 <div className="added-note-wrapper" style={{backgroundColor: trashNote.backgroundColor}}>
                                                     <div>
                                                         <h1>{trashNote.title}</h1>
+                                                        <p>{trashNote.label}</p>
                                                         <p>{trashNote.noteContent}</p>
                                                     </div>
                                                     <div className="new-note-lower">
